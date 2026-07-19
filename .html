@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รับล้างแอร์ ซ่อมแอร์ โคราช - ช่างมืออาชีพ</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        :root { --primary: #165DFF; --secondary: #FF7D00; --line: #06C755; --light: #F8FAFC; --dark: #1E293B; }
+        body { background: var(--light); line-height: 1.6; padding-bottom: 120px; }
+
+        header { background: linear-gradient(135deg, var(--primary), #0E42CC); color: white; padding: 2rem 1rem; text-align: center; }
+        .contact-header { margin-top: 1rem; font-size: 1.1rem; font-weight: 500; }
+        .contact-header a { color: #FFD700; text-decoration: none; font-weight: bold; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
+        section { margin-bottom: 3rem; }
+        h2 { color: var(--primary); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--secondary); display: inline-block; }
+
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .service-card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-left: 5px solid var(--primary); transition: 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { color: var(--secondary); margin-bottom: 0.8rem; }
+
+        .form-box { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: 500; color: var(--dark); }
+        input, select, textarea { width: 100%; padding: 0.8rem; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 1rem; }
+        button { background: var(--secondary); color: white; padding: 0.9rem 2rem; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; }
+        button:hover { background: #E67000; }
+
+        .report-table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .report-table th, .report-table td { padding: 1rem; text-align: left; border-bottom: 1px solid #E2E8F0; }
+        .report-table th { background: var(--primary); color: white; }
+        .status-new { color: var(--secondary); font-weight: bold; }
+        @media (max-width:768px) { .report-table { display: block; overflow-x: auto; } }
+
+        .fixed-contact { position: fixed; right: 15px; bottom: 20px; display: flex; flex-direction: column; gap: 12px; z-index: 999; }
+        .btn-fixed { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 28px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.25); transition: 0.3s; }
+        .btn-tel { background: #25D366; }
+        .btn-line { background: var(--line); }
+        .btn-fixed:hover { transform: scale(1.1); }
+
+        .share-box { text-align: center; margin: 1.5rem 0; }
+        .btn-share { background: var(--primary); color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; display: inline-block; font-weight: 500; }
+
+        footer { background: var(--dark); color: white; text-align: center; padding: 2rem 1rem; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+
+<div class="fixed-contact">
+    <a href="tel:0842368086" class="btn-fixed btn-tel" title="โทรเลย">📞</a>
+    <a href="https://line.me/ti/p/~kiwkelove" target="_blank" class="btn-fixed btn-line" title="แอดไลน์">💬</a>
+</div>
+
+<header>
+    <h1>❄️ รับล้างแอร์ ซ่อมแอร์ โคราช</h1>
+    <p>ทำงานสะอาด รับประกัน ทั่วเมืองนครราชสีมา</p>
+    <div class="contact-header">
+        📞 <a href="tel:0842368086">084-236-8086</a> | 📩 <a href="https://line.me/ti/p/~kiwkelove" target="_blank">kiwkelove</a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="share-box">
+        <a href="javascript:void(0)" class="btn-share" onclick="shareWeb()">🔗 แชร์เว็บให้เพื่อน/ลูกค้า</a>
+    </div>
+
+    <section id="service">
+        <h2>📋 บริการ & ราคา</h2>
+        <div class="service-grid">
+            <div class="service-card"><h3>🧊 ล้างแอร์ติดผนัง</h3><p>9,000-18,000 บีทียู</p><p><strong>เริ่ม 350 บาท</strong></p></div>
+            <div class="service-card"><h3>🧊 ล้างแอร์แขวน/ตั้งพื้น</h3><p>24,000-36,000 บีทียู</p><p><strong>เริ่ม 600 บาท</strong></p></div>
+            <div class="service-card"><h3>🔧 ซ่อมแอร์ทุกอาการ</h3><p>ตรวจฟรี! เติมน้ำยา แก้รั่ว</p><p><strong>คิดราคาตามงาน</strong></p></div>
+            <div class="service-card"><h3>🆕 ติดตั้ง/ย้ายแอร์</h3><p>ถอดประกอบ จัดระบบ</p><p><strong>เริ่ม 800 บาท</strong></p></div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>📝 จองคิวล้างแอร์</h2>
+        <div class="form-box">
+            <form id="bookingForm">
+                <div class="form-group"><label>ชื่อ-นามสกุล *</label><input type="text" id="cusName" required placeholder="เช่น นายสมชาย ใจดี"></div>
+                <div class="form-group"><label>เบอร์โทร *</label><input type="tel" id="cusTel" required placeholder="081-xxxx-xxxx"></div>
+                <div class="form-group"><label>ที่อยู่ให้บริการ *</label><textarea id="cusAddr" rows="3" required placeholder="บ้านเลขที่ หมู่ ตำบล อำเภอ"></textarea></div>
+                <div class="form-group"><label>บริการที่ต้องการ *</label>
+                    <select id="serviceType" required>
+                        <option value="">-- เลือก --</option>
+                        <option value="ล้างแอร์ติดผนัง">ล้างแอร์ติดผนัง</option>
+                        <option value="ล้างแอร์แขวน/ตั้งพื้น">ล้างแอร์แขวน/ตั้งพื้น</option>
+                        <option value="ซ่อมแอร์">ซ่อมแอร์</option>
+                        <option value="ติดตั้ง/ย้ายแอร์">ติดตั้ง/ย้ายแอร์</option>
+                    </select>
+                </div>
+                <div class="form-group"><label>วันที่นัด</label><input type="date" id="serviceDate"></div>
+                <div class="form-group"><label>รายละเอียดเพิ่ม</label><textarea id="detail" rows="2" placeholder="ขนาดแอร์ / อาการเสีย"></textarea></div>
+                <button type="submit">✅ ส่งการจองเข้าไลน์</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="report">
+        <h2>📊 รายการจองของฉัน</h2>
+        <table class="report-table">
+            <thead><tr><th>ลำดับ</th><th>ชื่อ</th><th>เบอร์</th><th>บริการ</th><th>วันที่</th><th>สถานะ</th></tr></thead>
+            <tbody id="reportBody"><tr><td colspan="6" style="text-align:center;color:#64748B;">ยังไม่มีรายการ</td></tr>
+        </tbody></table>
+    </section>
+</div>
+
+<footer>
+    <h3>❄️ ร้านล้างแอร์โคราช</h3>
+    <p>📞 084-236-8086 | 📍 ให้บริการทั่วเมืองนครราชสีมา</p>
+    <p>&copy; 2026 สงวนสิทธิ์</p>
+</footer>
+
+<script>
+    let bookingList = JSON.parse(localStorage.getItem('bookingData')) || [];
+    const reportBody = document.getElementById('reportBody');
+
+    function showReport() {
+        reportBody.innerHTML = '';
+        if(bookingList.length === 0) { reportBody.innerHTML = `<tr><td colspan="6" style="text-align:center;color:#64748B;">ยังไม่มีรายการ</td></tr>`; return; }
+        bookingList.forEach((item, i) => {
+            const r = document.createElement('tr');
+            r.innerHTML = `<td>${i+1}</td><td>${item.name}</td><td>${item.tel}</td><td>${item.service}</td><td>${item.sdate||'-'}</td><td class="status-new">รอดำเนินการ</td>`;
+            reportBody.appendChild(r);
+        });
+    }
+
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const d = {
+            name: document.getElementById('cusName').value,
+            tel: document.getElementById('cusTel').value,
+            addr: document.getElementById('cusAddr').value,
+            service: document.getElementById('serviceType').value,
+            sdate: document.getElementById('serviceDate').value,
+            detail: document.getElementById('detail').value
+        };
+
+        bookingList.push(d);
+        localStorage.setItem('bookingData', JSON.stringify(bookingList));
+        showReport();
+
+        const lineMsg = `📩 มีการจองคิวใหม่%0A%0A👤 ชื่อ: ${d.name}%0A📞 เบอร์: ${d.tel}%0A🏠 ที่อยู่: ${d.addr}%0A🛠 บริการ: ${d.service}%0A📅 วันที่: ${d.sdate||'ไม่ระบุ'}%0A📝 รายละเอียด: ${d.detail||'-'}`;
+        const lineUrl = `https://line.me/R/oaMessage/@laangairkorat/?${lineMsg}`;
+        window.open(lineUrl, '_blank');
+
+        alert('✅ บันทึกแล้ว! กำลังเปิดไลน์เพื่อส่งข้อมูล...');
+        this.reset();
+    });
+
+    function shareWeb() {
+        if(navigator.share) {
+            navigator.share({title: 'รับล้างแอร์โคราช', text: 'รับล้างแอร์ ซ่อมแอร์ ราคาประหยัด โทร 084-236-8086', url: window.location.href});
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert('📋 คัดลอกลิงก์เว็บแล้ว นำไปวางแชร์ได้เลย!');
+        }
+    }
+
+    showReport();
+</script>
+</body>
+</html>
